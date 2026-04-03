@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Product Reviews</h2>
+
+<table border="1">
+<tr>
+    <th>Product</th>
+    <th>User</th>
+    <th>Rating</th>
+    <th>Comment</th>
+</tr>
+
+{% for r in reviews %}
+<tr>
+    <td>{{ r.product }}</td>
+    <td>{{ r.user }}</td>
+    <td>{{ r.rating }}</td>
+    <td>{{ r.comment }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

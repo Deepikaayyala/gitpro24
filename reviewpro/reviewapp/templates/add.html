@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> -->
+<body>
+    <h2>Product Review</h2>
+    {% if msg %}
+    <p style="color:green;">{{msg}}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        Product: <input type="text" name="product"><br><br>
+        User:<input type="text" name="user"><br><br>
+        Rating:<input type="number" name="rating"><br><br>
+        Comment:<textarea name="comment" ></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="/display/">View Reviews</a>
+</body>
+</html>

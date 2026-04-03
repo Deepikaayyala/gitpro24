@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Document</title>
+</head> -->
+<body>
+    <h2>Blog Posts</h2>
+    <a href="/add/">Add Post</a>
+    {% for p in posts %}
+        <h3>{{p.title}}</h3>
+        <p>{{p.content}}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>

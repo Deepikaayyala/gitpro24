@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Blog</title>
+</head>
+<body>
+    <h2>Add Posts</h2>
+    {% if success %}
+    <p style="color:green;">Post saved successfully...</p>
+{% endif %}
+
+    <form method="post">
+         {% csrf_token %}
+        Title:<input type="text" name="title"><br><br>
+        Author:<input type="text" name="author"><br><br>
+        Content:<textarea name="content"></textarea><br><br>
+        <button type="submit">Save</button>
+
+    </form>
+</body>
+</html>
